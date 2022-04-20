@@ -8,7 +8,6 @@
 struct ColorTheme {
     template<size_t N>
     static void apply(const unsigned char (&color_map)[N][4]) {
-        unsigned char i = 0;
         for (size_t i = 0; i < N; i++) {
             auto val = color_map[i];
             Fl::set_color(val[0], val[1], val[2], val[3]);
