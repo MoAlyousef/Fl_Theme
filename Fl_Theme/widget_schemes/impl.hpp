@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdlib.h>
 #include <FL/Enumerations.H>
 #include <FL/Fl_SVG_Image.H>
 
