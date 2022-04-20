@@ -1,7 +1,7 @@
 #pragma once
 
+#include <stddef.h>
 #include <FL/Fl.H>
-#include <cstddef>
 #include "widget_schemes/all.hpp"
 #include "color_themes/all.hpp"
 
