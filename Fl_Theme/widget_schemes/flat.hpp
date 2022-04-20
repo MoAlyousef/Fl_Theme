@@ -11,7 +11,7 @@ static const char *FL_FLAT_RECT_UP =
     "<stop offset='100%%' style='stop-color:rgb(%d,%d,%d);stop-opacity:1' />"
     "</linearGradient>"
     "</defs>"
-    "<rect width='%d' height='%d' rx='%d' fill='url(#grad1)' />"
+    "<rect x='1' y='1' width='%d' height='%d' rx='%d' fill='url(#grad1)' />"
     "</svg>";
 
 static const char *FL_FLAT_RECT_DOWN =
@@ -22,7 +22,7 @@ static const char *FL_FLAT_RECT_DOWN =
     "<stop offset='0%%' style='stop-color:rgb(%d,%d,%d);stop-opacity:1' />"
     "</linearGradient>"
     "</defs>"
-    "<rect width='%d' height='%d' rx='%d' fill='url(#grad1)' />"
+    "<rect x='1' y='1' width='%d' height='%d' rx='%d' fill='url(#grad1)' />"
     "</svg>";
 
 static const char *FL_FLAT_RECT_FRAME = "<svg width='%d' height='%d'>"
@@ -47,7 +47,7 @@ inline void upbox(int x, int y, int w, int h, Fl_Color col) {
     auto darker = fl_darker(col);
     auto [r1, g1, b1] = detail::get_rgb(darker);
     auto svg =
-        detail::gen_svg(FL_FLAT_RECT_UP, w, h, r, g, b, r1, g1, b1, w, h, FLAT_BORDER_RADIUS);
+        detail::gen_svg(FL_FLAT_RECT_UP, w, h, r, g, b, r1, g1, b1, w - 2, h - 2, FLAT_BORDER_RADIUS);
     detail::draw_image(x, y, w, h, svg);
     free(svg);
 }
@@ -58,7 +58,7 @@ inline void downbox(int x, int y, int w, int h, Fl_Color col) {
     auto darker = fl_darker(col);
     auto [r1, g1, b1] = detail::get_rgb(darker);
     auto svg =
-        detail::gen_svg(FL_FLAT_RECT_DOWN, w, h, r, g, b, r1, g1, b1, w, h, FLAT_BORDER_RADIUS);
+        detail::gen_svg(FL_FLAT_RECT_DOWN, w, h, r, g, b, r1, g1, b1, w - 2, h - 2, FLAT_BORDER_RADIUS);
     detail::draw_image(x, y, w, h, svg);
     free(svg);
 }
