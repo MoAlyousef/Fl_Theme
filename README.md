@@ -34,4 +34,4 @@ int main() {
     return Fl::run();
 }
 ```
-![image](https://user-images.githubusercontent.com/37966791/164229389-dc52835f-2cd4-452b-8a40-8b26dd373a3c.png)
+![image](https://user-images.githubusercontent.com/37966791/164238382-871c14e2-9c4d-4b75-93f6-7cc3faf91083.png)
