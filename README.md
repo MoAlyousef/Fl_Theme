@@ -2,7 +2,7 @@
 Themer for FLTK
 
 ## Usage
-Fl_Theme is a header only lib, it can be added directly to your project:
+Fl_Theme is a header only C++17 lib, targetting FLTK 1.4 (due to SVG support), it can be added directly to your project:
 
 ```c++
 #include <FL/Fl.H>
@@ -34,4 +34,4 @@ int main() {
     return Fl::run();
 }
 ```
-![image](https://user-images.githubusercontent.com/37966791/164227801-5ffe594e-5cc5-479c-83c9-65f9f1fd91a0.png)
+![image](https://user-images.githubusercontent.com/37966791/164229389-dc52835f-2cd4-452b-8a40-8b26dd373a3c.png)
