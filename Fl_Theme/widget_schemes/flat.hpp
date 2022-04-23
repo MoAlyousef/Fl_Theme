@@ -47,7 +47,7 @@ inline void upbox(int x, int y, int w, int h, Fl_Color col) {
     auto darker = fl_darker(col);
     auto [r1, g1, b1] = detail::get_rgb(darker);
     auto svg =
-        detail::gen_svg(FL_FLAT_RECT_UP, w, h, r, g, b, r1, g1, b1, w - 2, h - 2, FLAT_BORDER_RADIUS);
+        detail::gen_svg(FL_FLAT_RECT_UP, w, h, r, g, b, r1, g1, b1, w - 4, h - 2, FLAT_BORDER_RADIUS);
     detail::draw_image(x, y, w, h, svg);
     free(svg);
 }
@@ -58,7 +58,7 @@ inline void downbox(int x, int y, int w, int h, Fl_Color col) {
     auto darker = fl_darker(col);
     auto [r1, g1, b1] = detail::get_rgb(darker);
     auto svg =
-        detail::gen_svg(FL_FLAT_RECT_DOWN, w, h, r, g, b, r1, g1, b1, w - 2, h - 2, FLAT_BORDER_RADIUS);
+        detail::gen_svg(FL_FLAT_RECT_DOWN, w, h, r, g, b, r1, g1, b1, w - 4, h - 2, FLAT_BORDER_RADIUS);
     detail::draw_image(x, y, w, h, svg);
     free(svg);
 }
@@ -66,7 +66,7 @@ inline void downbox(int x, int y, int w, int h, Fl_Color col) {
 inline void roundedframe(int x, int y, int w, int h, Fl_Color col) {
     auto rgb = detail::get_rgb(fl_color_average(FL_WHITE, col, 0.2));
     auto [r, g, b] = rgb;
-    auto svg = detail::gen_svg(FL_FLAT_RECT_FRAME, w, h, w - 2, h - 2, FLAT_BORDER_RADIUS, r, g, b);
+    auto svg = detail::gen_svg(FL_FLAT_RECT_FRAME, w, h, w - 4, h - 2, FLAT_BORDER_RADIUS, r, g, b);
     detail::draw_image(x, y, w, h, svg);
     free(svg);
 }
