@@ -50,7 +50,6 @@ inline void init_metro_theme() {
     Fl::scheme("gtk+");
     Fl::set_boxtype(FL_UP_BOX, metro_upbox, 2, 2, 4, 4);
     Fl::set_boxtype(FL_DOWN_BOX, metro_downbox, 2, 2, 4, 4);
-    Fl::set_boxtype(FL_DOWN_BOX, metro_downbox, 2, 2, 4, 4);
     Fl::set_boxtype(FL_DIAMOND_UP_BOX, metro_active_upbox, 2, 2, 4, 4);
     Fl::set_boxtype(FL_DIAMOND_DOWN_BOX, metro_active_downbox, 2, 2, 4, 4);
 }
