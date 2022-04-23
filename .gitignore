@@ -1,4 +1,3 @@
-main
 # Prerequisites
 *.d
 
@@ -31,3 +30,8 @@ main
 *.exe
 *.out
 *.app
+
+main
+index.html
+metro
+temp.html

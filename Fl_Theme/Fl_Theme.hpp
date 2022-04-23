@@ -18,6 +18,7 @@ struct ColorTheme {
 
 enum class SchemeType {
     Flat,
+    Metro,
 };
 
 struct WidgetScheme {
@@ -31,6 +32,7 @@ struct WidgetScheme {
 
 enum class ThemeType {
     Dark,
+    Metro,
 };
 
 struct WidgetTheme {
@@ -42,6 +44,16 @@ struct WidgetTheme {
             Fl::background(70, 70, 70);
             Fl::foreground(255, 255, 255);
             Fl::set_color(FL_SELECTION_COLOR, 48, 79, 120);
+            break;
+        }
+        case ThemeType::Metro: {
+            init_metro_theme();
+            Fl::background(0xF0, 0xF0, 0xF0);
+            Fl::background2(0xFF, 0xFF, 0xFF);
+            Fl::foreground(0x00, 0x00, 0x00);
+            Fl::set_color(FL_INACTIVE_COLOR, 0x6F, 0x6F, 0x6F);
+            Fl::set_color(FL_SELECTION_COLOR, 0x33, 0x99, 0xFF);
+            Fl::set_color(FL_FREE_COLOR, 0xFF, 0xFF, 0xFF);
             break;
         }
         }
