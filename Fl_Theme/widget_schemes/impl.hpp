@@ -40,7 +40,7 @@ char *gen_svg(const char *fmt, Args...args) {
 
 inline void draw_image(int x, int y, int w, int h, const char *str) {
     auto img = new Fl_SVG_Image(NULL, str);
-    img->draw(x, y, w, h);
+    img->draw(x - 1, y - 1 , w + 2, h + 2);
     delete img;
 }
 } // namespace detail
